@@ -1,0 +1,93 @@
+// src/EventCalendar.scss
+
+$calendar-width: 100%;
+$modal-padding: 20px;
+
+.App {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.calendar-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.calendar {
+  width: $calendar-width;
+  .event-calendar {
+    width: 100%;
+    .react-calendar__month-view__days button {
+      height: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      vertical-align: top;
+      align-items: center;
+    }
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: $modal-padding;
+  overflow: auto;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.event-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+  input {
+    padding: 10px;
+    width: 250px;
+    box-sizing: border-box;
+  }
+  
+  textarea {
+    padding: 10px;
+    width: 250px;
+    box-sizing: border-box;
+    resize: vertical;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    background-color: black;
+    color: white;
+  }
+}
+
+.error{
+    color: red;
+}
